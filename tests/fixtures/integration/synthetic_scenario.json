@@ -1,0 +1,13 @@
+{
+  "source": "mock",
+  "synthetic": true,
+  "description": "Predeclared synthetic truth labels and separately chosen prediction labels. No measured model accuracy or real CSI.",
+  "frames": [
+    {"ground_truth_label": 0, "predicted_labels": {"KNN": 0, "GCN": 1, "ConcatMLP": 0, "ConcatMLP-mask": 0}},
+    {"ground_truth_label": 1, "predicted_labels": {"KNN": 0, "GCN": 1, "ConcatMLP": 1, "ConcatMLP-mask": 1}},
+    {"ground_truth_label": 2, "predicted_labels": {"KNN": 3, "GCN": 2, "ConcatMLP": 2, "ConcatMLP-mask": 2}},
+    {"ground_truth_label": 7, "predicted_labels": {"KNN": 7, "GCN": 6, "ConcatMLP": 7, "ConcatMLP-mask": 7}},
+    {"ground_truth_label": 12, "predicted_labels": {"KNN": 11, "GCN": 12, "ConcatMLP": 12, "ConcatMLP-mask": 12}},
+    {"ground_truth_label": 13, "predicted_labels": {"KNN": 13, "GCN": 14, "ConcatMLP": 12, "ConcatMLP-mask": 13}}
+  ]
+}

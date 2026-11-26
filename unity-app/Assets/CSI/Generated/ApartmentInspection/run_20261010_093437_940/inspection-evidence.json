@@ -1,0 +1,16 @@
+{
+    "generated_utc": "2026-10-10T09:34:42.7714413Z",
+    "map_id": "apartment_v1_2026-10-10",
+    "source_sha256": "2BD65F143DE7FF17876FA559403D6EBA0E10E7EDB68851DB3CBE9BC9D130574F",
+    "resource_sha256": "2BD65F143DE7FF17876FA559403D6EBA0E10E7EDB68851DB3CBE9BC9D130574F",
+    "scene_path": "Assets/CSI/Scenes/ApartmentInspection.unity",
+    "generated_asset_folder": "Assets/CSI/Generated/ApartmentInspection/run_20261010_093437_940",
+    "geometry_validation": "PASS: matching source/resource hashes, labels/spacing, unique four-neighbor edges, opening spans and no blocked openings, unknown excluded",
+    "interpretation": "Net-space planar abstraction; 1 local Unity unit = 1 metre. Heights are temporary display values. No AR alignment, T01, exit selection, or physical accuracy is validated here.",
+    "point_count": 15,
+    "undirected_edge_count": 22,
+    "opening_count": 3,
+    "floor_count": 5,
+    "mesh_asset_count": 94,
+    "material_asset_count": 5
+}

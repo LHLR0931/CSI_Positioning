@@ -1,0 +1,1084 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "title_zh": "公寓场域建模底图源数据",
+    "map_id": "apartment_v1_2026-10-10",
+    "created_date": "2026-10-10",
+    "purpose": "Geometry source for subsequent modelling; not an existing Unity runtime configuration.",
+    "status": "user_confirmed_planar_layout",
+    "source_basis": [
+      {
+        "id": "hand_sketch",
+        "kind": "user_supplied_hand_drawn_map",
+        "date": "2026-10-10",
+        "description_zh": "用户提供并逐项共同核对的手绘地图；不通过图片像素推算尺寸。"
+      },
+      {
+        "id": "confirmation_1",
+        "kind": "user_confirmation",
+        "date": "2026-10-10",
+        "description_zh": "尺寸表均正确，均不含墙厚；阳台上下齐平；阳台门端点对应10/5号点；办公区两侧桌柜采用不可穿越边界简化。"
+      },
+      {
+        "id": "confirmation_2",
+        "kind": "user_confirmation",
+        "date": "2026-10-10",
+        "description_zh": "办公开口左端距左边界2.342m；4号点到相邻右墙0.8m、走廊尽头2.558m；走廊上下齐平且宽1.2m；办公与厨房之间为墙，墙后未知。"
+      },
+      {
+        "id": "confirmation_3",
+        "kind": "user_confirmation",
+        "date": "2026-10-10",
+        "description_zh": "厨房左边界及门左端对齐客厅右墙，门向右延伸0.8m，厨房顶齐办公区顶；地图仅保留手绘图现有空间。"
+      }
+    ],
+    "scope_zh": "保留阳台、客厅点阵、办公区、走廊、厨房；旧图入户门和洗手间已由用户简化省略；未知区域不建模。",
+    "approximation_zh": "净尺寸边界抽象，忽略墙体厚度；不是建筑级竣工测绘。显示厚度不能侵占已确认的室内净尺寸。",
+    "measurement_tolerance_m": null,
+    "not_claimed": [
+      "architectural_as_built",
+      "survey_tolerance_verified",
+      "Unity_runtime_schema_compatibility",
+      "backend_label_contract_verified",
+      "physical_AR_validation"
+    ],
+    "coordinate_values_zh": "绝对坐标由已确认的尺寸、对齐关系和格点原点换算；不声称每个绝对坐标均被单独实测。"
+  },
+  "coordinate_system": {
+    "name": "site_plan_m",
+    "units": "m",
+    "origin": {
+      "grid_label": 0,
+      "xy_m": [
+        0,
+        0
+      ]
+    },
+    "positive_x": "0 -> 4",
+    "positive_y": "0 -> 10",
+    "axes_zh": "x向图右、y向图上，均为地面平面坐标；高度h另记，不把y当作Unity竖轴。",
+    "wall_geometry": "zero_thickness_clear_face_abstraction",
+    "floor_h_m": 0,
+    "unity_mapping_status": "pending_adapter_implementation",
+    "image_pixel_scaling_used": false,
+    "derived_reference_lines_m": {
+      "balcony_left_x": -2.742,
+      "balcony_divider_x": -0.742,
+      "office_right_x": 3.2,
+      "living_right_and_kitchen_left_x": 4,
+      "far_right_x": 5.758,
+      "bottom_y": -0.4,
+      "corridor_bottom_y": 1.6,
+      "office_and_kitchen_front_y": 2.8,
+      "top_y": 4.6
+    }
+  },
+  "dimensions": [
+    {
+      "id": "interior_total_width_excluding_balcony",
+      "value_m": 6.5,
+      "evidence": "user_confirmed",
+      "description_zh": "从阳台分界面至最右侧墙面"
+    },
+    {
+      "id": "balcony_width",
+      "value_m": 2,
+      "evidence": "user_confirmed",
+      "description_zh": "阳台左右宽度"
+    },
+    {
+      "id": "balcony_length",
+      "value_m": 5,
+      "evidence": "user_confirmed",
+      "description_zh": "阳台上下长度"
+    },
+    {
+      "id": "office_width",
+      "value_m": 3.942,
+      "evidence": "user_confirmed",
+      "description_zh": "办公区左右宽度"
+    },
+    {
+      "id": "office_depth",
+      "value_m": 1.8,
+      "evidence": "user_confirmed",
+      "description_zh": "办公区上下深度"
+    },
+    {
+      "id": "office_front_to_top_grid_row",
+      "value_m": 1.2,
+      "evidence": "user_confirmed",
+      "description_zh": "办公区下边界至10—14号点所在水平线"
+    },
+    {
+      "id": "grid_to_bottom_wall",
+      "value_m": 0.4,
+      "evidence": "user_confirmed",
+      "description_zh": "0号点至客厅底墙"
+    },
+    {
+      "id": "grid_to_left_divider",
+      "value_m": 0.742,
+      "evidence": "user_confirmed",
+      "description_zh": "0号点至阳台分界面"
+    },
+    {
+      "id": "opening_span",
+      "value_m": 0.8,
+      "evidence": "user_confirmed",
+      "description_zh": "各入口两端之间跨度，尚未核实门扇打开后的实际通行净宽"
+    },
+    {
+      "id": "office_opening_left_offset",
+      "value_m": 2.342,
+      "evidence": "user_confirmed",
+      "description_zh": "办公开口左端距办公区左边界",
+      "formula": "0.742 + 1.6"
+    },
+    {
+      "id": "point_4_to_living_right_wall",
+      "value_m": 0.8,
+      "evidence": "user_confirmed",
+      "description_zh": "4号点至客厅相邻右墙"
+    },
+    {
+      "id": "point_4_to_corridor_end",
+      "value_m": 2.558,
+      "evidence": "user_confirmed_derived",
+      "description_zh": "4号点所在竖线至走廊右端墙",
+      "formula": "6.5 - 3.942"
+    },
+    {
+      "id": "corridor_width",
+      "value_m": 1.2,
+      "evidence": "user_confirmed",
+      "description_zh": "走廊上下宽度"
+    },
+    {
+      "id": "grid_span_x",
+      "value_m": 3.2,
+      "evidence": "derived",
+      "description_zh": "5列格点首末中心间距",
+      "formula": "(5 - 1) * 0.8"
+    },
+    {
+      "id": "grid_span_y",
+      "value_m": 1.6,
+      "evidence": "derived",
+      "description_zh": "3行格点首末中心间距",
+      "formula": "(3 - 1) * 0.8"
+    },
+    {
+      "id": "corridor_extension_length",
+      "value_m": 1.758,
+      "evidence": "derived",
+      "description_zh": "客厅右墙向右至走廊尽头",
+      "formula": "2.558 - 0.8"
+    },
+    {
+      "id": "kitchen_width",
+      "value_m": 1.758,
+      "evidence": "derived",
+      "description_zh": "厨房左边界至右边界",
+      "formula": "5.758 - 4.0"
+    },
+    {
+      "id": "unknown_strip_width",
+      "value_m": 0.8,
+      "evidence": "derived",
+      "description_zh": "办公区右边界至厨房左边界",
+      "formula": "4.0 - 3.2"
+    },
+    {
+      "id": "total_abstract_width_including_balcony",
+      "value_m": 8.5,
+      "evidence": "derived",
+      "description_zh": "抽象平面图含阳台的总宽；不含墙厚",
+      "formula": "6.5 + 2.0"
+    }
+  ],
+  "regions": [
+    {
+      "id": "balcony",
+      "label_zh": "阳台",
+      "min_xy_m": [
+        -2.742,
+        -0.4
+      ],
+      "max_xy_m": [
+        -0.742,
+        4.6
+      ],
+      "polygon_xy_m": [
+        [
+          -2.742,
+          -0.4
+        ],
+        [
+          -0.742,
+          -0.4
+        ],
+        [
+          -0.742,
+          4.6
+        ],
+        [
+          -2.742,
+          4.6
+        ]
+      ],
+      "geometry_evidence": "derived_from_confirmed_dimensions_and_alignments",
+      "model_role": "context_interior",
+      "navigation_enabled_by_default": false
+    },
+    {
+      "id": "living_room",
+      "label_zh": "客厅",
+      "min_xy_m": [
+        -0.742,
+        -0.4
+      ],
+      "max_xy_m": [
+        4,
+        2.8
+      ],
+      "polygon_xy_m": [
+        [
+          -0.742,
+          -0.4
+        ],
+        [
+          4,
+          -0.4
+        ],
+        [
+          4,
+          2.8
+        ],
+        [
+          -0.742,
+          2.8
+        ]
+      ],
+      "geometry_evidence": "derived_from_confirmed_dimensions_and_alignments",
+      "model_role": "localization_and_navigation_context",
+      "navigation_enabled_by_default": false
+    },
+    {
+      "id": "office",
+      "label_zh": "办公区",
+      "min_xy_m": [
+        -0.742,
+        2.8
+      ],
+      "max_xy_m": [
+        3.2,
+        4.6
+      ],
+      "polygon_xy_m": [
+        [
+          -0.742,
+          2.8
+        ],
+        [
+          3.2,
+          2.8
+        ],
+        [
+          3.2,
+          4.6
+        ],
+        [
+          -0.742,
+          4.6
+        ]
+      ],
+      "geometry_evidence": "derived_from_confirmed_dimensions_and_alignments",
+      "model_role": "context_interior",
+      "navigation_enabled_by_default": false
+    },
+    {
+      "id": "corridor_extension",
+      "label_zh": "走廊外凸段",
+      "min_xy_m": [
+        4,
+        1.6
+      ],
+      "max_xy_m": [
+        5.758,
+        2.8
+      ],
+      "polygon_xy_m": [
+        [
+          4,
+          1.6
+        ],
+        [
+          5.758,
+          1.6
+        ],
+        [
+          5.758,
+          2.8
+        ],
+        [
+          4,
+          2.8
+        ]
+      ],
+      "geometry_evidence": "derived_from_confirmed_dimensions_and_alignments",
+      "model_role": "context_interior",
+      "navigation_enabled_by_default": false
+    },
+    {
+      "id": "kitchen",
+      "label_zh": "厨房",
+      "min_xy_m": [
+        4,
+        2.8
+      ],
+      "max_xy_m": [
+        5.758,
+        4.6
+      ],
+      "polygon_xy_m": [
+        [
+          4,
+          2.8
+        ],
+        [
+          5.758,
+          2.8
+        ],
+        [
+          5.758,
+          4.6
+        ],
+        [
+          4,
+          4.6
+        ]
+      ],
+      "geometry_evidence": "derived_from_confirmed_dimensions_and_alignments",
+      "model_role": "context_interior",
+      "navigation_enabled_by_default": false
+    },
+    {
+      "id": "unknown",
+      "label_zh": "未知区域",
+      "min_xy_m": [
+        3.2,
+        2.8
+      ],
+      "max_xy_m": [
+        4,
+        4.6
+      ],
+      "polygon_xy_m": [
+        [
+          3.2,
+          2.8
+        ],
+        [
+          4,
+          2.8
+        ],
+        [
+          4,
+          4.6
+        ],
+        [
+          3.2,
+          4.6
+        ]
+      ],
+      "geometry_evidence": "derived_from_confirmed_dimensions_and_alignments",
+      "model_role": "excluded_unknown",
+      "navigation_enabled_by_default": false,
+      "generate_geometry": false
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "B01",
+      "start_xy_m": [
+        -2.742,
+        -0.4
+      ],
+      "end_xy_m": [
+        -2.742,
+        4.6
+      ],
+      "kind": "wall",
+      "height_m": null,
+      "thickness_m": null
+    },
+    {
+      "id": "B02",
+      "start_xy_m": [
+        -2.742,
+        4.6
+      ],
+      "end_xy_m": [
+        -0.742,
+        4.6
+      ],
+      "kind": "wall",
+      "height_m": null,
+      "thickness_m": null
+    },
+    {
+      "id": "B03",
+      "start_xy_m": [
+        -2.742,
+        -0.4
+      ],
+      "end_xy_m": [
+        -0.742,
+        -0.4
+      ],
+      "kind": "wall",
+      "height_m": null,
+      "thickness_m": null
+    },
+    {
+      "id": "B04",
+      "start_xy_m": [
+        -0.742,
+        -0.4
+      ],
+      "end_xy_m": [
+        -0.742,
+        0.8
+      ],
+      "kind": "wall",
+      "height_m": null,
+      "thickness_m": null
+    },
+    {
+      "id": "B05",
+      "start_xy_m": [
+        -0.742,
+        1.6
+      ],
+      "end_xy_m": [
+        -0.742,
+        4.6
+      ],
+      "kind": "wall",
+      "height_m": null,
+      "thickness_m": null
+    },
+    {
+      "id": "B06",
+      "start_xy_m": [
+        -0.742,
+        -0.4
+      ],
+      "end_xy_m": [
+        4,
+        -0.4
+      ],
+      "kind": "wall",
+      "height_m": null,
+      "thickness_m": null
+    },
+    {
+      "id": "B07",
+      "start_xy_m": [
+        4,
+        -0.4
+      ],
+      "end_xy_m": [
+        4,
+        1.6
+      ],
+      "kind": "wall",
+      "height_m": null,
+      "thickness_m": null
+    },
+    {
+      "id": "B08",
+      "start_xy_m": [
+        4,
+        1.6
+      ],
+      "end_xy_m": [
+        5.758,
+        1.6
+      ],
+      "kind": "wall",
+      "height_m": null,
+      "thickness_m": null
+    },
+    {
+      "id": "B09",
+      "start_xy_m": [
+        5.758,
+        1.6
+      ],
+      "end_xy_m": [
+        5.758,
+        4.6
+      ],
+      "kind": "wall",
+      "height_m": null,
+      "thickness_m": null
+    },
+    {
+      "id": "B10",
+      "start_xy_m": [
+        4,
+        4.6
+      ],
+      "end_xy_m": [
+        5.758,
+        4.6
+      ],
+      "kind": "wall",
+      "height_m": null,
+      "thickness_m": null
+    },
+    {
+      "id": "B11",
+      "start_xy_m": [
+        4,
+        2.8
+      ],
+      "end_xy_m": [
+        4,
+        4.6
+      ],
+      "kind": "wall",
+      "height_m": null,
+      "thickness_m": null
+    },
+    {
+      "id": "B12",
+      "start_xy_m": [
+        4.8,
+        2.8
+      ],
+      "end_xy_m": [
+        5.758,
+        2.8
+      ],
+      "kind": "wall",
+      "height_m": null,
+      "thickness_m": null
+    },
+    {
+      "id": "B13",
+      "start_xy_m": [
+        3.2,
+        2.8
+      ],
+      "end_xy_m": [
+        4,
+        2.8
+      ],
+      "kind": "wall",
+      "note_zh": "办公区与厨房之间的连接墙；墙后未知，不生成可通行区域。",
+      "height_m": null,
+      "thickness_m": null
+    },
+    {
+      "id": "B14",
+      "start_xy_m": [
+        -0.742,
+        2.8
+      ],
+      "end_xy_m": [
+        1.6,
+        2.8
+      ],
+      "kind": "furniture_simplified_barrier",
+      "note_zh": "实际为桌柜，按不可穿越边界建模；非满高实墙。",
+      "height_m": null,
+      "thickness_m": null
+    },
+    {
+      "id": "B15",
+      "start_xy_m": [
+        2.4,
+        2.8
+      ],
+      "end_xy_m": [
+        3.2,
+        2.8
+      ],
+      "kind": "furniture_simplified_barrier",
+      "note_zh": "实际为桌柜，按不可穿越边界建模；高度待测，不默认用于AR满高遮挡。",
+      "height_m": null,
+      "thickness_m": null
+    },
+    {
+      "id": "B16",
+      "start_xy_m": [
+        -0.742,
+        4.6
+      ],
+      "end_xy_m": [
+        3.2,
+        4.6
+      ],
+      "kind": "wall",
+      "height_m": null,
+      "thickness_m": null
+    },
+    {
+      "id": "B17",
+      "start_xy_m": [
+        3.2,
+        2.8
+      ],
+      "end_xy_m": [
+        3.2,
+        4.6
+      ],
+      "kind": "region_boundary_unspecified",
+      "note_zh": "办公区右缘接未知区域；平面范围已确定，但边界实体材料、高度未单独确认，不据此生成满高实墙。",
+      "height_m": null,
+      "thickness_m": null
+    },
+    {
+      "id": "B18",
+      "start_xy_m": [
+        4,
+        1.6
+      ],
+      "end_xy_m": [
+        4,
+        2.8
+      ],
+      "kind": "open_connection",
+      "note_zh": "客厅与走廊相接，无墙；仅用于拓扑标记，不生成实体。",
+      "height_m": null,
+      "thickness_m": null
+    }
+  ],
+  "openings": [
+    {
+      "id": "balcony_opening",
+      "drawing_id": "D01",
+      "label_zh": "阳台门洞",
+      "endpoint_labels_xy_m": {"A": [-0.742, 1.6], "B": [-0.742, 0.8]},
+      "endpoint_label_note_zh": "沿用现场测量表：A为门洞上端，B为下端；start/end是几何存储顺序，不决定A/B标签。",
+      "start_xy_m": [
+        -0.742,
+        0.8
+      ],
+      "end_xy_m": [
+        -0.742,
+        1.6
+      ],
+      "center_xy_m": [
+        -0.742,
+        1.2
+      ],
+      "connects": [
+        "living_room",
+        "balcony"
+      ],
+      "kind": "door_opening",
+      "span_m": 0.8,
+      "span_evidence": "user_confirmed",
+      "coordinates_evidence": "derived_from_confirmed_dimensions_and_alignments",
+      "actual_passable_clear_width_m": null,
+      "height_m": null,
+      "door_leaf_state": null,
+      "note_zh": "span_m为开口端点跨度；实际通行净宽、开口高度及门扇信息未作为已测数据写入。"
+    },
+    {
+      "id": "office_opening",
+      "drawing_id": "D02",
+      "label_zh": "办公区入口",
+      "endpoint_labels_xy_m": {"A": [1.6, 2.8], "B": [2.4, 2.8]},
+      "endpoint_label_note_zh": "A为开口左端，B为右端。",
+      "start_xy_m": [
+        1.6,
+        2.8
+      ],
+      "end_xy_m": [
+        2.4,
+        2.8
+      ],
+      "center_xy_m": [
+        2,
+        2.8
+      ],
+      "connects": [
+        "living_room",
+        "office"
+      ],
+      "kind": "opening_between_furniture",
+      "span_m": 0.8,
+      "span_evidence": "user_confirmed",
+      "coordinates_evidence": "derived_from_confirmed_dimensions_and_alignments",
+      "actual_passable_clear_width_m": null,
+      "height_m": null,
+      "door_leaf_state": "not_present",
+      "note_zh": "用户已确认办公区无门扇；span_m为两侧桌柜之间的开口端点跨度。实际通行净宽与高度仍未作为已测数据写入。"
+    },
+    {
+      "id": "kitchen_opening",
+      "drawing_id": "D03",
+      "label_zh": "厨房门洞",
+      "endpoint_labels_xy_m": {"A": [4.0, 2.8], "B": [4.8, 2.8]},
+      "endpoint_label_note_zh": "A为门洞左端，B为右端。",
+      "start_xy_m": [
+        4,
+        2.8
+      ],
+      "end_xy_m": [
+        4.8,
+        2.8
+      ],
+      "center_xy_m": [
+        4.4,
+        2.8
+      ],
+      "connects": [
+        "corridor_extension",
+        "kitchen"
+      ],
+      "kind": "door_opening",
+      "span_m": 0.8,
+      "span_evidence": "user_confirmed",
+      "coordinates_evidence": "derived_from_confirmed_dimensions_and_alignments",
+      "actual_passable_clear_width_m": null,
+      "height_m": null,
+      "door_leaf_state": null,
+      "note_zh": "span_m为开口端点跨度；实际通行净宽、开口高度及门扇信息未作为已测数据写入。"
+    }
+  ],
+  "grid": {
+    "id": "csi_grid_15",
+    "columns": 5,
+    "rows": 3,
+    "spacing_m": 0.8,
+    "label_formula": "label = 5 * j + i",
+    "indices": {
+      "i": [
+        0,
+        4
+      ],
+      "j": [
+        0,
+        2
+      ]
+    },
+    "point_formula": "x_m = 0.8 * i; y_m = 0.8 * j",
+    "outer_point_envelope_xy_m": [
+      [
+        0,
+        0
+      ],
+      [
+        3.2,
+        0
+      ],
+      [
+        3.2,
+        1.6
+      ],
+      [
+        0,
+        1.6
+      ]
+    ],
+    "envelope_note_zh": "此框是最外层点中心包络，不是经实验证实的CSI有效区域或出界检测边界。",
+    "points": [
+      {
+        "label": 0,
+        "i": 0,
+        "j": 0,
+        "x_m": 0,
+        "y_m": 0
+      },
+      {
+        "label": 1,
+        "i": 1,
+        "j": 0,
+        "x_m": 0.8,
+        "y_m": 0
+      },
+      {
+        "label": 2,
+        "i": 2,
+        "j": 0,
+        "x_m": 1.6,
+        "y_m": 0
+      },
+      {
+        "label": 3,
+        "i": 3,
+        "j": 0,
+        "x_m": 2.4,
+        "y_m": 0
+      },
+      {
+        "label": 4,
+        "i": 4,
+        "j": 0,
+        "x_m": 3.2,
+        "y_m": 0
+      },
+      {
+        "label": 5,
+        "i": 0,
+        "j": 1,
+        "x_m": 0,
+        "y_m": 0.8
+      },
+      {
+        "label": 6,
+        "i": 1,
+        "j": 1,
+        "x_m": 0.8,
+        "y_m": 0.8
+      },
+      {
+        "label": 7,
+        "i": 2,
+        "j": 1,
+        "x_m": 1.6,
+        "y_m": 0.8
+      },
+      {
+        "label": 8,
+        "i": 3,
+        "j": 1,
+        "x_m": 2.4,
+        "y_m": 0.8
+      },
+      {
+        "label": 9,
+        "i": 4,
+        "j": 1,
+        "x_m": 3.2,
+        "y_m": 0.8
+      },
+      {
+        "label": 10,
+        "i": 0,
+        "j": 2,
+        "x_m": 0,
+        "y_m": 1.6
+      },
+      {
+        "label": 11,
+        "i": 1,
+        "j": 2,
+        "x_m": 0.8,
+        "y_m": 1.6
+      },
+      {
+        "label": 12,
+        "i": 2,
+        "j": 2,
+        "x_m": 1.6,
+        "y_m": 1.6
+      },
+      {
+        "label": 13,
+        "i": 3,
+        "j": 2,
+        "x_m": 2.4,
+        "y_m": 1.6
+      },
+      {
+        "label": 14,
+        "i": 4,
+        "j": 2,
+        "x_m": 3.2,
+        "y_m": 1.6
+      }
+    ],
+    "adjacency": "four_neighbor_undirected",
+    "diagonal_edges": false,
+    "edges": [
+      {
+        "from": 0,
+        "to": 1,
+        "length_m": 0.8
+      },
+      {
+        "from": 0,
+        "to": 5,
+        "length_m": 0.8
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "length_m": 0.8
+      },
+      {
+        "from": 1,
+        "to": 6,
+        "length_m": 0.8
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "length_m": 0.8
+      },
+      {
+        "from": 2,
+        "to": 7,
+        "length_m": 0.8
+      },
+      {
+        "from": 3,
+        "to": 4,
+        "length_m": 0.8
+      },
+      {
+        "from": 3,
+        "to": 8,
+        "length_m": 0.8
+      },
+      {
+        "from": 4,
+        "to": 9,
+        "length_m": 0.8
+      },
+      {
+        "from": 5,
+        "to": 6,
+        "length_m": 0.8
+      },
+      {
+        "from": 5,
+        "to": 10,
+        "length_m": 0.8
+      },
+      {
+        "from": 6,
+        "to": 7,
+        "length_m": 0.8
+      },
+      {
+        "from": 6,
+        "to": 11,
+        "length_m": 0.8
+      },
+      {
+        "from": 7,
+        "to": 8,
+        "length_m": 0.8
+      },
+      {
+        "from": 7,
+        "to": 12,
+        "length_m": 0.8
+      },
+      {
+        "from": 8,
+        "to": 9,
+        "length_m": 0.8
+      },
+      {
+        "from": 8,
+        "to": 13,
+        "length_m": 0.8
+      },
+      {
+        "from": 9,
+        "to": 14,
+        "length_m": 0.8
+      },
+      {
+        "from": 10,
+        "to": 11,
+        "length_m": 0.8
+      },
+      {
+        "from": 11,
+        "to": 12,
+        "length_m": 0.8
+      },
+      {
+        "from": 12,
+        "to": 13,
+        "length_m": 0.8
+      },
+      {
+        "from": 13,
+        "to": 14,
+        "length_m": 0.8
+      }
+    ],
+    "backend_label_contract_status": "requires_teammate_verification"
+  },
+  "navigation": {
+    "route_policy": "four_neighbor_grid_then_explicit_configured_exit_connector",
+    "grid_graph_enabled": true,
+    "continuous_floor_shortcut_enabled": false,
+    "context_interiors_routable_by_default": false,
+    "preferred_first_destination": {
+      "id": "T01",
+      "label_zh": "阳台门前（客厅侧）",
+      "xy_m": null,
+      "exit_grid_label": null,
+      "exit_candidates": [
+        0,
+        5,
+        10
+      ],
+      "connector_polyline_xy_m": null,
+      "status": "pending_physical_standing_point_and_exit_selection"
+    },
+    "arrival_policy": "manual_arrived_confirmation_baseline",
+    "exit_equals_arrival": false,
+    "opening_center_equals_destination": false,
+    "out_of_grid_tracking_zh": "图上几何范围不构成后端有效性判断；点阵外位置与AR状态遵循前端方案，不能从本JSON推断CSI出界检测已实现。"
+  },
+  "ar_reference": {
+    "image_id": null,
+    "physical_width_m": null,
+    "physical_height_m": null,
+    "center_xy_m": null,
+    "center_h_m": null,
+    "normal_direction": null,
+    "top_direction": null,
+    "calibration_status": "pending"
+  },
+  "unknowns": [
+    {
+      "id": "T01_position_and_exit",
+      "blocking_for": "final_balcony_route",
+      "description_zh": "阳台客厅侧实际站立终点、出口格点和出口至终点的连接路线待现场确认。"
+    },
+    {
+      "id": "AR_reference_pose",
+      "blocking_for": "AR_world_alignment",
+      "description_zh": "固定参考图片、印刷尺寸、安装位置高度和朝向待确认。"
+    },
+    {
+      "id": "opening_clearances_and_heights",
+      "blocking_for": "detailed_entrance_models_and_traversal_validation",
+      "description_zh": "门洞/入口高度及实际通行净宽待核实；阳台与厨房门扇信息待确认，办公区已确认无门扇。"
+    },
+    {
+      "id": "furniture_height",
+      "blocking_for": "accurate_3d_furniture_or_occlusion",
+      "description_zh": "办公入口两侧桌柜高度待测；其边界用于阻止穿越，不当作满高墙。"
+    },
+    {
+      "id": "office_right_edge_material",
+      "blocking_for": "detailed_unknown_side_geometry",
+      "description_zh": "办公区右边界实体材质及高度未单独确认；未知区不建模，不提供可通行推断。"
+    },
+    {
+      "id": "wall_thickness",
+      "blocking_for": null,
+      "description_zh": "首版净边界图忽略墙厚；涉及门洞进深或图片安装局部厚度时再补测。"
+    },
+    {
+      "id": "measurement_tolerance",
+      "blocking_for": "physical_accuracy_claim",
+      "description_zh": "尺寸已确认，但未提供测量容差；坐标小数位不代表毫米级测量精度。"
+    }
+  ]
+}

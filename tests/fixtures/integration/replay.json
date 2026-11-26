@@ -1,0 +1,1442 @@
+{
+  "source": "mock",
+  "synthetic": true,
+  "provenance": "SYNTHETIC frontend integration fixture; no CSI or trained model inference.",
+  "session_id": "synthetic-replay-v1",
+  "meta": {
+    "contract_version": "0.1",
+    "source": "mock",
+    "synthetic": true,
+    "provenance": "SYNTHETIC frontend integration fixture; no CSI or trained model inference.",
+    "grid": {
+      "cols": 5,
+      "rows": 3,
+      "spacing_m": 0.8
+    },
+    "cells": [
+      {
+        "label": 0,
+        "x": 0,
+        "y": 0,
+        "x_m": 0.0,
+        "y_m": 0.0
+      },
+      {
+        "label": 1,
+        "x": 1,
+        "y": 0,
+        "x_m": 0.8,
+        "y_m": 0.0
+      },
+      {
+        "label": 2,
+        "x": 2,
+        "y": 0,
+        "x_m": 1.6,
+        "y_m": 0.0
+      },
+      {
+        "label": 3,
+        "x": 3,
+        "y": 0,
+        "x_m": 2.4,
+        "y_m": 0.0
+      },
+      {
+        "label": 4,
+        "x": 4,
+        "y": 0,
+        "x_m": 3.2,
+        "y_m": 0.0
+      },
+      {
+        "label": 5,
+        "x": 0,
+        "y": 1,
+        "x_m": 0.0,
+        "y_m": 0.8
+      },
+      {
+        "label": 6,
+        "x": 1,
+        "y": 1,
+        "x_m": 0.8,
+        "y_m": 0.8
+      },
+      {
+        "label": 7,
+        "x": 2,
+        "y": 1,
+        "x_m": 1.6,
+        "y_m": 0.8
+      },
+      {
+        "label": 8,
+        "x": 3,
+        "y": 1,
+        "x_m": 2.4,
+        "y_m": 0.8
+      },
+      {
+        "label": 9,
+        "x": 4,
+        "y": 1,
+        "x_m": 3.2,
+        "y_m": 0.8
+      },
+      {
+        "label": 10,
+        "x": 0,
+        "y": 2,
+        "x_m": 0.0,
+        "y_m": 1.6
+      },
+      {
+        "label": 11,
+        "x": 1,
+        "y": 2,
+        "x_m": 0.8,
+        "y_m": 1.6
+      },
+      {
+        "label": 12,
+        "x": 2,
+        "y": 2,
+        "x_m": 1.6,
+        "y_m": 1.6
+      },
+      {
+        "label": 13,
+        "x": 3,
+        "y": 2,
+        "x_m": 2.4,
+        "y_m": 1.6
+      },
+      {
+        "label": 14,
+        "x": 4,
+        "y": 2,
+        "x_m": 3.2,
+        "y_m": 1.6
+      }
+    ],
+    "devices": [
+      {
+        "id": "piA",
+        "kind": "pi",
+        "x_m": -0.9,
+        "y_m": 2.0,
+        "h_m": 1.1
+      },
+      {
+        "id": "piB",
+        "kind": "pi",
+        "x_m": 2.65,
+        "y_m": 2.2,
+        "h_m": 0.6
+      },
+      {
+        "id": "apX",
+        "kind": "ap",
+        "x_m": 0.75,
+        "y_m": -0.7,
+        "h_m": 0.75
+      },
+      {
+        "id": "apY",
+        "kind": "ap",
+        "x_m": 4.1,
+        "y_m": -0.3,
+        "h_m": 1.35
+      }
+    ],
+    "links": [
+      {
+        "id": "piA_apX",
+        "pi": "piA",
+        "ap": "apX"
+      },
+      {
+        "id": "piA_apY",
+        "pi": "piA",
+        "ap": "apY"
+      },
+      {
+        "id": "piB_apX",
+        "pi": "piB",
+        "ap": "apX"
+      },
+      {
+        "id": "piB_apY",
+        "pi": "piB",
+        "ap": "apY"
+      }
+    ],
+    "window_frames": 16,
+    "frame_rate_hz": 10,
+    "mock_transport": "http-polling",
+    "mock_websocket_supported": false,
+    "session_id": "synthetic-replay-v1",
+    "supported_models": [
+      "KNN",
+      "GCN",
+      "ConcatMLP",
+      "ConcatMLP-mask"
+    ],
+    "default_model_id": "ConcatMLP-mask",
+    "extensions": [
+      "local.mock.four-model.v1",
+      "local.mock.replay.v1"
+    ]
+  },
+  "predictions": [
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 0,
+      "timestamp": "2026-10-21T03:00:00.000Z",
+      "window": {
+        "start": "2026-10-21T02:59:58.400Z",
+        "end": "2026-10-21T03:00:00.000Z",
+        "frames": 16
+      },
+      "label": 0,
+      "x": 0,
+      "y": 0,
+      "x_m": 0.0,
+      "y_m": 0.0,
+      "confidence": 0.72,
+      "probs": [
+        0.72,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "expected_m": {
+        "x": 0.48,
+        "y": 0.24
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "KNN",
+      "window_id": "window-00000000",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 0,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 0,
+      "timestamp": "2026-10-21T03:00:00.000Z",
+      "window": {
+        "start": "2026-10-21T02:59:58.400Z",
+        "end": "2026-10-21T03:00:00.000Z",
+        "frames": 16
+      },
+      "label": 1,
+      "x": 1,
+      "y": 0,
+      "x_m": 0.8,
+      "y_m": 0.0,
+      "confidence": 0.72,
+      "probs": [
+        0.02,
+        0.72,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "expected_m": {
+        "x": 1.04,
+        "y": 0.24
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "GCN",
+      "window_id": "window-00000000",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 0,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 0,
+      "timestamp": "2026-10-21T03:00:00.000Z",
+      "window": {
+        "start": "2026-10-21T02:59:58.400Z",
+        "end": "2026-10-21T03:00:00.000Z",
+        "frames": 16
+      },
+      "label": 0,
+      "x": 0,
+      "y": 0,
+      "x_m": 0.0,
+      "y_m": 0.0,
+      "confidence": 0.72,
+      "probs": [
+        0.72,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "expected_m": {
+        "x": 0.48,
+        "y": 0.24
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "ConcatMLP",
+      "window_id": "window-00000000",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 0,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 0,
+      "timestamp": "2026-10-21T03:00:00.000Z",
+      "window": {
+        "start": "2026-10-21T02:59:58.400Z",
+        "end": "2026-10-21T03:00:00.000Z",
+        "frames": 16
+      },
+      "label": 0,
+      "x": 0,
+      "y": 0,
+      "x_m": 0.0,
+      "y_m": 0.0,
+      "confidence": 0.72,
+      "probs": [
+        0.72,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "expected_m": {
+        "x": 0.48,
+        "y": 0.24
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "ConcatMLP-mask",
+      "window_id": "window-00000000",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 0,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 1,
+      "timestamp": "2026-10-21T03:00:00.400Z",
+      "window": {
+        "start": "2026-10-21T02:59:58.800Z",
+        "end": "2026-10-21T03:00:00.400Z",
+        "frames": 16
+      },
+      "label": 0,
+      "x": 0,
+      "y": 0,
+      "x_m": 0.0,
+      "y_m": 0.0,
+      "confidence": 0.72,
+      "probs": [
+        0.72,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "expected_m": {
+        "x": 0.48,
+        "y": 0.24
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "KNN",
+      "window_id": "window-00000001",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 1,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 1,
+      "timestamp": "2026-10-21T03:00:00.400Z",
+      "window": {
+        "start": "2026-10-21T02:59:58.800Z",
+        "end": "2026-10-21T03:00:00.400Z",
+        "frames": 16
+      },
+      "label": 1,
+      "x": 1,
+      "y": 0,
+      "x_m": 0.8,
+      "y_m": 0.0,
+      "confidence": 0.72,
+      "probs": [
+        0.02,
+        0.72,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "expected_m": {
+        "x": 1.04,
+        "y": 0.24
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "GCN",
+      "window_id": "window-00000001",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 1,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 1,
+      "timestamp": "2026-10-21T03:00:00.400Z",
+      "window": {
+        "start": "2026-10-21T02:59:58.800Z",
+        "end": "2026-10-21T03:00:00.400Z",
+        "frames": 16
+      },
+      "label": 1,
+      "x": 1,
+      "y": 0,
+      "x_m": 0.8,
+      "y_m": 0.0,
+      "confidence": 0.72,
+      "probs": [
+        0.02,
+        0.72,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "expected_m": {
+        "x": 1.04,
+        "y": 0.24
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "ConcatMLP",
+      "window_id": "window-00000001",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 1,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 1,
+      "timestamp": "2026-10-21T03:00:00.400Z",
+      "window": {
+        "start": "2026-10-21T02:59:58.800Z",
+        "end": "2026-10-21T03:00:00.400Z",
+        "frames": 16
+      },
+      "label": 1,
+      "x": 1,
+      "y": 0,
+      "x_m": 0.8,
+      "y_m": 0.0,
+      "confidence": 0.72,
+      "probs": [
+        0.02,
+        0.72,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "expected_m": {
+        "x": 1.04,
+        "y": 0.24
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "ConcatMLP-mask",
+      "window_id": "window-00000001",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 1,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 2,
+      "timestamp": "2026-10-21T03:00:00.800Z",
+      "window": {
+        "start": "2026-10-21T02:59:59.200Z",
+        "end": "2026-10-21T03:00:00.800Z",
+        "frames": 16
+      },
+      "label": 3,
+      "x": 3,
+      "y": 0,
+      "x_m": 2.4,
+      "y_m": 0.0,
+      "confidence": 0.72,
+      "probs": [
+        0.02,
+        0.02,
+        0.02,
+        0.72,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "expected_m": {
+        "x": 2.16,
+        "y": 0.24
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "KNN",
+      "window_id": "window-00000002",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 2,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 2,
+      "timestamp": "2026-10-21T03:00:00.800Z",
+      "window": {
+        "start": "2026-10-21T02:59:59.200Z",
+        "end": "2026-10-21T03:00:00.800Z",
+        "frames": 16
+      },
+      "label": 2,
+      "x": 2,
+      "y": 0,
+      "x_m": 1.6,
+      "y_m": 0.0,
+      "confidence": 0.72,
+      "probs": [
+        0.02,
+        0.02,
+        0.72,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "expected_m": {
+        "x": 1.6,
+        "y": 0.24
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "GCN",
+      "window_id": "window-00000002",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 2,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 2,
+      "timestamp": "2026-10-21T03:00:00.800Z",
+      "window": {
+        "start": "2026-10-21T02:59:59.200Z",
+        "end": "2026-10-21T03:00:00.800Z",
+        "frames": 16
+      },
+      "label": 2,
+      "x": 2,
+      "y": 0,
+      "x_m": 1.6,
+      "y_m": 0.0,
+      "confidence": 0.72,
+      "probs": [
+        0.02,
+        0.02,
+        0.72,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "expected_m": {
+        "x": 1.6,
+        "y": 0.24
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "ConcatMLP",
+      "window_id": "window-00000002",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 2,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 2,
+      "timestamp": "2026-10-21T03:00:00.800Z",
+      "window": {
+        "start": "2026-10-21T02:59:59.200Z",
+        "end": "2026-10-21T03:00:00.800Z",
+        "frames": 16
+      },
+      "label": 2,
+      "x": 2,
+      "y": 0,
+      "x_m": 1.6,
+      "y_m": 0.0,
+      "confidence": 0.72,
+      "probs": [
+        0.02,
+        0.02,
+        0.72,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "expected_m": {
+        "x": 1.6,
+        "y": 0.24
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "ConcatMLP-mask",
+      "window_id": "window-00000002",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 2,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 3,
+      "timestamp": "2026-10-21T03:00:01.200Z",
+      "window": {
+        "start": "2026-10-21T02:59:59.600Z",
+        "end": "2026-10-21T03:00:01.200Z",
+        "frames": 16
+      },
+      "label": 7,
+      "x": 2,
+      "y": 1,
+      "x_m": 1.6,
+      "y_m": 0.8,
+      "confidence": 0.72,
+      "probs": [
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.72,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "expected_m": {
+        "x": 1.6,
+        "y": 0.8
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "KNN",
+      "window_id": "window-00000003",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 7,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 3,
+      "timestamp": "2026-10-21T03:00:01.200Z",
+      "window": {
+        "start": "2026-10-21T02:59:59.600Z",
+        "end": "2026-10-21T03:00:01.200Z",
+        "frames": 16
+      },
+      "label": 6,
+      "x": 1,
+      "y": 1,
+      "x_m": 0.8,
+      "y_m": 0.8,
+      "confidence": 0.72,
+      "probs": [
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.72,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "expected_m": {
+        "x": 1.04,
+        "y": 0.8
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "GCN",
+      "window_id": "window-00000003",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 7,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 3,
+      "timestamp": "2026-10-21T03:00:01.200Z",
+      "window": {
+        "start": "2026-10-21T02:59:59.600Z",
+        "end": "2026-10-21T03:00:01.200Z",
+        "frames": 16
+      },
+      "label": 7,
+      "x": 2,
+      "y": 1,
+      "x_m": 1.6,
+      "y_m": 0.8,
+      "confidence": 0.72,
+      "probs": [
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.72,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "expected_m": {
+        "x": 1.6,
+        "y": 0.8
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "ConcatMLP",
+      "window_id": "window-00000003",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 7,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 3,
+      "timestamp": "2026-10-21T03:00:01.200Z",
+      "window": {
+        "start": "2026-10-21T02:59:59.600Z",
+        "end": "2026-10-21T03:00:01.200Z",
+        "frames": 16
+      },
+      "label": 7,
+      "x": 2,
+      "y": 1,
+      "x_m": 1.6,
+      "y_m": 0.8,
+      "confidence": 0.72,
+      "probs": [
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.72,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "expected_m": {
+        "x": 1.6,
+        "y": 0.8
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "ConcatMLP-mask",
+      "window_id": "window-00000003",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 7,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 4,
+      "timestamp": "2026-10-21T03:00:01.600Z",
+      "window": {
+        "start": "2026-10-21T03:00:00.000Z",
+        "end": "2026-10-21T03:00:01.600Z",
+        "frames": 16
+      },
+      "label": 11,
+      "x": 1,
+      "y": 2,
+      "x_m": 0.8,
+      "y_m": 1.6,
+      "confidence": 0.72,
+      "probs": [
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.72,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "expected_m": {
+        "x": 1.04,
+        "y": 1.36
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "KNN",
+      "window_id": "window-00000004",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 12,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 4,
+      "timestamp": "2026-10-21T03:00:01.600Z",
+      "window": {
+        "start": "2026-10-21T03:00:00.000Z",
+        "end": "2026-10-21T03:00:01.600Z",
+        "frames": 16
+      },
+      "label": 12,
+      "x": 2,
+      "y": 2,
+      "x_m": 1.6,
+      "y_m": 1.6,
+      "confidence": 0.72,
+      "probs": [
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.72,
+        0.02,
+        0.02
+      ],
+      "expected_m": {
+        "x": 1.6,
+        "y": 1.36
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "GCN",
+      "window_id": "window-00000004",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 12,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 4,
+      "timestamp": "2026-10-21T03:00:01.600Z",
+      "window": {
+        "start": "2026-10-21T03:00:00.000Z",
+        "end": "2026-10-21T03:00:01.600Z",
+        "frames": 16
+      },
+      "label": 12,
+      "x": 2,
+      "y": 2,
+      "x_m": 1.6,
+      "y_m": 1.6,
+      "confidence": 0.72,
+      "probs": [
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.72,
+        0.02,
+        0.02
+      ],
+      "expected_m": {
+        "x": 1.6,
+        "y": 1.36
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "ConcatMLP",
+      "window_id": "window-00000004",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 12,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 4,
+      "timestamp": "2026-10-21T03:00:01.600Z",
+      "window": {
+        "start": "2026-10-21T03:00:00.000Z",
+        "end": "2026-10-21T03:00:01.600Z",
+        "frames": 16
+      },
+      "label": 12,
+      "x": 2,
+      "y": 2,
+      "x_m": 1.6,
+      "y_m": 1.6,
+      "confidence": 0.72,
+      "probs": [
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.72,
+        0.02,
+        0.02
+      ],
+      "expected_m": {
+        "x": 1.6,
+        "y": 1.36
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "ConcatMLP-mask",
+      "window_id": "window-00000004",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 12,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 5,
+      "timestamp": "2026-10-21T03:00:02.000Z",
+      "window": {
+        "start": "2026-10-21T03:00:00.400Z",
+        "end": "2026-10-21T03:00:02.000Z",
+        "frames": 16
+      },
+      "label": 13,
+      "x": 3,
+      "y": 2,
+      "x_m": 2.4,
+      "y_m": 1.6,
+      "confidence": 0.72,
+      "probs": [
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.72,
+        0.02
+      ],
+      "expected_m": {
+        "x": 2.16,
+        "y": 1.36
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "KNN",
+      "window_id": "window-00000005",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 13,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 5,
+      "timestamp": "2026-10-21T03:00:02.000Z",
+      "window": {
+        "start": "2026-10-21T03:00:00.400Z",
+        "end": "2026-10-21T03:00:02.000Z",
+        "frames": 16
+      },
+      "label": 14,
+      "x": 4,
+      "y": 2,
+      "x_m": 3.2,
+      "y_m": 1.6,
+      "confidence": 0.72,
+      "probs": [
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.72
+      ],
+      "expected_m": {
+        "x": 2.72,
+        "y": 1.36
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "GCN",
+      "window_id": "window-00000005",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 13,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 5,
+      "timestamp": "2026-10-21T03:00:02.000Z",
+      "window": {
+        "start": "2026-10-21T03:00:00.400Z",
+        "end": "2026-10-21T03:00:02.000Z",
+        "frames": 16
+      },
+      "label": 12,
+      "x": 2,
+      "y": 2,
+      "x_m": 1.6,
+      "y_m": 1.6,
+      "confidence": 0.72,
+      "probs": [
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.72,
+        0.02,
+        0.02
+      ],
+      "expected_m": {
+        "x": 1.6,
+        "y": 1.36
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "ConcatMLP",
+      "window_id": "window-00000005",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 13,
+      "truth_source": "fixture_label"
+    },
+    {
+      "type": "prediction",
+      "contract_version": "0.1",
+      "source": "mock",
+      "synthetic": true,
+      "seq": 5,
+      "timestamp": "2026-10-21T03:00:02.000Z",
+      "window": {
+        "start": "2026-10-21T03:00:00.400Z",
+        "end": "2026-10-21T03:00:02.000Z",
+        "frames": 16
+      },
+      "label": 13,
+      "x": 3,
+      "y": 2,
+      "x_m": 2.4,
+      "y_m": 1.6,
+      "confidence": 0.72,
+      "probs": [
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.72,
+        0.02
+      ],
+      "expected_m": {
+        "x": 2.16,
+        "y": 1.36
+      },
+      "links_used": [
+        "piA_apX",
+        "piA_apY",
+        "piB_apX",
+        "piB_apY"
+      ],
+      "state": "ready",
+      "model_id": "ConcatMLP-mask",
+      "window_id": "window-00000005",
+      "session_id": "synthetic-replay-v1",
+      "ground_truth_label": 13,
+      "truth_source": "fixture_label"
+    }
+  ]
+}

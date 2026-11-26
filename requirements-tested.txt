@@ -1,0 +1,15 @@
+# Exact environment used for the final experiments on Windows / Python 3.11.15.
+# The additional index provides the CUDA 12.8 PyTorch wheel.
+--extra-index-url https://download.pytorch.org/whl/cu128
+
+numpy==2.4.6
+scipy==1.17.1
+scikit-learn==1.9.0
+joblib==1.5.3
+matplotlib==3.11.1
+torch==2.11.0+cu128
+fastapi==0.139.2
+uvicorn[standard]==0.51.0
+pydantic==2.13.4
+pytest==9.1.1
+httpx==0.28.1

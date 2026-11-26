@@ -1,0 +1,38 @@
+# ---- 数据（不上传：d1/static_raw64.npz 有 131 MB，超过 GitHub 单文件 100 MB 上限；原始 pcap 也很大）----
+/data/
+/datasets/
+*.npz
+
+# ---- 训练产物（模型权重另行分享）----
+backend/artifacts/
+*.pt
+*.joblib
+
+# ---- 文献 PDF（有版权；前人学位论文未公开）----
+references/
+
+# ---- 历史归档 ----
+archive/
+
+# ---- 本地工作记录与生成文件 ----
+/report/figures/*.png
+/report/figures/*.pdf
+/report/figures/*.py
+/_github_release/
+/output/
+/tmp/
+/conclusion_*.tex
+/introduction_*.tex
+/thesis-review.txt
+
+# ---- 本机环境与缓存 ----
+.vscode/
+backend/venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.pytest_tmp/
+
+# ---- 其他前端构建产物 ----
+frontend/node_modules/
+frontend/android/

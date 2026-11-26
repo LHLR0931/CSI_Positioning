@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CSI · AR 参考图 A-01</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#182b32;color:#f4f7f5;font:16px system-ui,"Microsoft YaHei",sans-serif}main{max-width:1240px;margin:auto;padding:24px}h1{font-size:26px;margin:0 0 8px}p{line-height:1.6;margin:6px 0}.controls{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:18px 0}button{border:0;border-radius:8px;padding:10px 16px;background:#ccebdd;color:#143e49;font-weight:700;cursor:pointer}input{width:220px}.stage{display:flex;justify-content:center;align-items:center;background:#102027;padding:24px;min-height:350px;border-radius:12px;overflow:auto}#marker{display:block;width:700px;max-width:100%;height:auto;flex-shrink:0;image-rendering:auto}.note{max-width:900px;color:#c5d7d4;font-size:14px}.stage:fullscreen{background:#102027;padding:20px}.stage:fullscreen #marker{max-height:92vh;width:auto;max-width:94vw;object-fit:contain}.status{font-variant-numeric:tabular-nums;color:#eabd62}
+</style>
+<main>
+<h1>AR 参考图 A-01 · 手机扫描用</h1>
+<p>保持此图静止，在手机首页打开 <b>AR calibration lab</b>。用尺子量下面整张图从左边缘到右边缘的实际宽度，再填入手机的参考图宽度。</p>
+<p class="note">电脑像素和 CSS 厘米不能代替实际测量。先调整大小／全屏，再测量；测试过程中不要缩放、拖动窗口或改变显示器方向。默认 20 cm 只是输入初值。</p>
+<div class="controls"><label>显示宽度 <input id="size" type="range" min="350" max="1000" value="700" step="10"></label><span id="readout" class="status"></span><button id="full">全屏显示参考图</button></div>
+<div class="stage" id="stage"><img id="marker" src="CSI_Reference.png" alt="CSI reference image A-01"></div>
+<p class="note">识别区域是整张长方形图片，包含深色边框、标题和顶部箭头。避免反光，让手机看清完整图片。此测试展示参考图坐标系中的 1:20 公寓模型，不代表已完成公寓 1:1 配准，也没有连接 CSI 后端。</p>
+</main>
+<script>
+const marker=document.querySelector('#marker'),size=document.querySelector('#size'),readout=document.querySelector('#readout');
+function update(){marker.style.width=size.value+'px';readout.textContent='页面设定 '+size.value+' px（实际厘米需用尺量）';}size.addEventListener('input',update);update();
+document.querySelector('#full').addEventListener('click',()=>document.querySelector('#stage').requestFullscreen());
+</script>
+</html>
