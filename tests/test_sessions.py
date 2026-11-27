@@ -93,8 +93,9 @@ def test_cross_day_session_requires_sc_from(tmp_roots):
     assert all(b.startswith("d1:") for b in d3["subcarrier_selection_batches"].astype(str))
 
 
-def test_unknown_session_never_falls_back_to_legacy_dir(tmp_roots):
+def test_unknown_session_never_falls_back_to_legacy_dir(tmp_roots, monkeypatch):
     src, _ = tmp_roots
+    monkeypatch.setattr(config, "AP_BSSIDS", {"apX": "", "apY": ""})
     (src / "phase2_r1").mkdir()          # 顶层旧布局存在，也不能被 d7 误读
     with pytest.raises(FileNotFoundError):
         load_real_stage2.build("d7")

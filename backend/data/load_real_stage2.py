@@ -147,10 +147,10 @@ def _selection_rounds(session: str, present_rounds: set[int]) -> list[int]:
 
 
 def build(session: str = "session_phase2_001", sc_from: str | None = None):
-    ap_discriminators = _ap_discriminators()
     round_dirs = sessions.stage2_round_dirs(session)
     if not round_dirs:
         raise FileNotFoundError(f"session '{session}' 下没有 phase2_r* 目录，请先确认采集数据路径。")
+    ap_discriminators = _ap_discriminators()
     grid = sessions.session_grid(session)
     skipped = sessions.skipped_points(session)
     print(f"session={session}  源目录={round_dirs[0].parent}  "
